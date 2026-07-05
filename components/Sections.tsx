@@ -136,9 +136,6 @@ export function TrustBand() {
               reviewers keep full clinical authority and final sign-off on
               every case.
             </p>
-            <p className="font-mono text-[10px] text-[#9AA1AC] mt-1">
-              Photo: Luis Melendez / Unsplash
-            </p>
           </div>
         </div>
       </div>

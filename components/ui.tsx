@@ -46,12 +46,10 @@ export function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; titl
 export function ImageBand({
   src,
   alt,
-  credit,
   caption,
 }: {
   src: string;
   alt: string;
-  credit: string;
   caption: string;
 }) {
   return (
@@ -61,7 +59,6 @@ export function ImageBand({
       </div>
       <div className="p-4 bg-offwhite">
         <p className="text-sm text-steel">{caption}</p>
-        <p className="font-mono text-[10px] text-[#9AA1AC] mt-1">{credit}</p>
       </div>
     </div>
   );
