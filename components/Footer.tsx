@@ -7,14 +7,13 @@ export default function Footer() {
         <Image
           src="/logo.png"
           alt="Ventra Health Systems"
-          width={140}
+          width={130}
           height={140}
           className="h-16 w-auto"
         />
         <div className="font-mono text-xs text-black/60 space-y-1">
           <p>ventrahealthsystems.com</p>
           <p>admin@ventrahealthsystems.com</p>
-          <p>Confidential — for recipient use only</p>
         </div>
       </div>
     </footer>

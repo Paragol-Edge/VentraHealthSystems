@@ -7,9 +7,11 @@ import { ShieldCheck, Clock, Stamp } from "lucide-react";
 export default function Hero() {
   const scanRef = useRef<HTMLDivElement>(null);
   const linesRef = useRef<HTMLDivElement[]>([]);
+  const cardRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+      // One-time reveal: scan-line + lines fading in on load
       const tl = gsap.timeline({ delay: 0.3 });
       tl.set(scanRef.current, { top: "0%" })
         .fromTo(
@@ -19,6 +21,16 @@ export default function Hero() {
           0.1
         )
         .to(scanRef.current, { top: "100%", duration: 1.4, ease: "power2.inOut" }, 0);
+
+      // Continuous floating loop — runs forever, independent of scroll,
+      // identical on mobile and desktop since it's not scroll-triggered.
+      gsap.to(cardRef.current, {
+        y: 14,
+        duration: 2.4,
+        ease: "sine.inOut",
+        repeat: -1,
+        yoyo: true,
+      });
     });
     return () => ctx.revert();
   }, []);
@@ -46,7 +58,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
-            <a
+           <a 
               href="/contact"
               className="bg-white text-ink font-medium px-6 py-3 rounded-sm hover:bg-white/85 transition-colors"
             >
@@ -77,7 +89,10 @@ export default function Hero() {
         </div>
 
         <div className="relative">
-          <div className="relative bg-[#161616] border border-white/10 rounded-md p-6 md:p-8 shadow-2xl overflow-hidden">
+          <div
+            ref={cardRef}
+            className="relative bg-[#161616] border border-white/10 rounded-md p-6 md:p-8 shadow-2xl overflow-hidden will-change-transform"
+          >
             <div
               ref={scanRef}
               className="pointer-events-none absolute left-0 w-full h-16 bg-gradient-to-b from-white/0 via-white/20 to-white/0 -translate-y-1/2"

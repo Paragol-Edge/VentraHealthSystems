@@ -181,7 +181,7 @@ function ServiceCTA() {
     <section className="bg-ink text-offwhite py-20 md:py-28">
       <div ref={ref} className="reveal mx-auto max-w-3xl px-6 md:px-10 text-center">
         <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">Ready to see it on a real case?</h2>
-        <a href="/contact" className="inline-flex items-center gap-2 bg-brass text-ink px-7 py-4 rounded-sm hover:bg-brass/90 transition-colors font-medium">
+        <a href="/contact" className="inline-flex items-center gap-2 bg-white text-black px-7 py-4 rounded-sm hover:bg-offwhite/90 transition-colors font-medium">
           Schedule a discovery call <ArrowRight className="w-4 h-4" />
         </a>
       </div>

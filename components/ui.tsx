@@ -22,7 +22,12 @@ export function useReveal<T extends HTMLElement>() {
             y: 0,
             duration: 0.7,
             ease: "power3.out",
-            scrollTrigger: { trigger: el, start: "top 85%" },
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              end: "bottom 15%",
+              toggleActions: "play reverse play reverse",
+            },
           }
         );
       });
@@ -35,10 +40,8 @@ export function useReveal<T extends HTMLElement>() {
 export function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; title: string; dark?: boolean }) {
   return (
     <div className="reveal mb-12 max-w-2xl">
-      <p className="eyebrow text-brass mb-4">{eyebrow}</p>
-      <h2 className={`font-display text-3xl md:text-4xl leading-tight ${dark ? "text-offwhite" : ""}`}>
-        {title}
-      </h2>
+      <p className={`eyebrow mb-4 ${dark ? "text-white/70" : "text-black/70"}`}>{eyebrow}</p>
+      <h2 className={`font-display text-3xl md:text-4xl leading-tight ${dark ? "text-white" : ""}`}>{title}</h2>
     </div>
   );
 }
@@ -46,19 +49,22 @@ export function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; titl
 export function ImageBand({
   src,
   alt,
+  credit,
   caption,
 }: {
   src: string;
   alt: string;
+  credit: string;
   caption: string;
 }) {
   return (
-    <div className="reveal relative rounded-md overflow-hidden border border-steel/20">
+    <div className="reveal relative rounded-md overflow-hidden border border-black/15">
       <div className="relative w-full h-64 md:h-80">
         <Image src={src} alt={alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 800px" />
       </div>
-      <div className="p-4 bg-offwhite">
+      <div className="p-4 bg-white">
         <p className="text-sm text-steel">{caption}</p>
+        <p className="font-mono text-[10px] text-black/40 mt-1">{credit}</p>
       </div>
     </div>
   );

@@ -35,7 +35,12 @@ function useReveal<T extends HTMLElement>() {
             y: 0,
             duration: 0.7,
             ease: "power3.out",
-            scrollTrigger: { trigger: el, start: "top 85%" },
+            scrollTrigger: {
+              trigger: el,
+              start: "top 85%",
+              end: "bottom 15%",
+              toggleActions: "play reverse play reverse",
+            },
           }
         );
       });
