@@ -45,11 +45,11 @@ function useReveal<T extends HTMLElement>() {
   return ref;
 }
 
-function SectionHeading({ eyebrow, title }: { eyebrow: string; title: string }) {
+function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; title: string; dark?: boolean }) {
   return (
     <div className="reveal mb-12 max-w-2xl">
-      <p className="eyebrow text-brass mb-4">{eyebrow}</p>
-      <h2 className="font-display text-3xl md:text-4xl leading-tight">{title}</h2>
+      <p className={`eyebrow mb-4 ${dark ? "text-white/70" : "text-black/70"}`}>{eyebrow}</p>
+      <h2 className={`font-display text-3xl md:text-4xl leading-tight ${dark ? "text-white" : ""}`}>{title}</h2>
     </div>
   );
 }
@@ -68,8 +68,8 @@ export function Problem() {
         <SectionHeading eyebrow="01 · The Problem" title="Physicians are reviewing less and writing more." />
         <div className="grid sm:grid-cols-2 gap-6">
           {items.map((it) => (
-            <div key={it.title} className="reveal border border-steel/20 rounded-md p-6 bg-offwhite">
-              <it.icon className="w-5 h-5 text-brass mb-4" strokeWidth={1.5} />
+            <div key={it.title} className="reveal border border-black/15 rounded-md p-6 bg-white">
+              <it.icon className="w-5 h-5 text-black mb-4" strokeWidth={1.5} />
               <h3 className="font-display text-lg mb-2">{it.title}</h3>
               <p className="text-steel text-sm leading-relaxed">{it.body}</p>
             </div>
@@ -89,14 +89,14 @@ export function Solution() {
     "Redirects physician hours from formatting to the decisions clients pay for.",
   ];
   return (
-    <section id="solution" className="bg-ink text-offwhite py-20 md:py-28">
+    <section id="solution" className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10 grid md:grid-cols-2 gap-14 items-start">
         <div className="reveal">
-          <p className="eyebrow text-brass mb-4">03 · The Solution</p>
+          <p className="eyebrow text-white/70 mb-4">03 · The Solution</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
             Ventra is the documentation layer for clinical review operations.
           </h2>
-          <p className="text-[#C7CDD6] leading-relaxed">
+          <p className="text-white/70 leading-relaxed">
             Not a staffing vendor. Not an outsourcing shop. Infrastructure that
             sits behind your review operation, absorbing documentation
             execution so your reviewers are left with exactly one job: deciding.
@@ -105,8 +105,8 @@ export function Solution() {
         <ul className="space-y-5">
           {items.map((t) => (
             <li key={t} className="reveal flex gap-3">
-              <CheckCircle2 className="w-5 h-5 text-brass shrink-0 mt-0.5" strokeWidth={1.5} />
-              <span className="text-[#C7CDD6] leading-relaxed">{t}</span>
+              <CheckCircle2 className="w-5 h-5 text-white shrink-0 mt-0.5" strokeWidth={1.5} />
+              <span className="text-white/70 leading-relaxed">{t}</span>
             </li>
           ))}
         </ul>
@@ -120,22 +120,23 @@ export function TrustBand() {
   return (
     <section className="bg-paper py-16">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="reveal relative rounded-md overflow-hidden border border-steel/20">
+        <div className="reveal relative rounded-md overflow-hidden border border-black/15">
           <div className="relative w-full h-64 md:h-80">
             <Image
               src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1600&q=80"
               alt="Physicians walking through a hospital corridor"
               fill
-              className="object-cover"
+              className="object-cover grayscale"
               sizes="(max-width: 768px) 100vw, 1200px"
             />
           </div>
-          <div className="p-4 bg-offwhite">
+          <div className="p-4 bg-white">
             <p className="text-sm text-steel">
               A dedicated physician team executes documentation — your
               reviewers keep full clinical authority and final sign-off on
               every case.
             </p>
+            <p className="font-mono text-[10px] text-black/40 mt-1">Photo: Luis Melendez / Unsplash</p>
           </div>
         </div>
       </div>
@@ -156,13 +157,13 @@ export function Transformation() {
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeading eyebrow="04 · The Transformation" title="The Ventra outcome model." />
-        <div className="reveal border border-steel/20 rounded-md overflow-hidden">
-          <div className="grid grid-cols-2 bg-ink text-offwhite font-mono text-xs uppercase tracking-widest2">
+        <div className="reveal border border-black/15 rounded-md overflow-hidden">
+          <div className="grid grid-cols-2 bg-ink text-white font-mono text-xs uppercase tracking-widest2">
             <div className="p-4">Before Ventra</div>
-            <div className="p-4 text-brass">After Ventra</div>
+            <div className="p-4 text-white">After Ventra</div>
           </div>
           {rows.map(([before, after]) => (
-            <div key={before} className="grid grid-cols-2 border-t border-steel/15">
+            <div key={before} className="grid grid-cols-2 border-t border-black/10">
               <div className="p-4 text-sm text-steel">{before}</div>
               <div className="p-4 text-sm font-medium">{after}</div>
             </div>
@@ -185,25 +186,22 @@ export function Process() {
     ["07", "Clarification", "T+26hrs", "No-charge clarification within the SLA window.", "No gap where a case can stall."],
   ];
   return (
-    <section id="process" className="bg-ink text-offwhite py-20 md:py-28">
+    <section id="process" className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="reveal eyebrow text-brass mb-4">06 · Process</p>
+        <p className="reveal eyebrow text-white/70 mb-4">06 · Process</p>
         <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-14 max-w-2xl">
           Built for clinical rigor at scale.
         </h2>
         <div className="space-y-0">
           {stages.map(([n, title, time, activity, why]) => (
-            <div
-              key={n}
-              className="reveal grid md:grid-cols-[3rem_10rem_1fr_1fr] gap-4 md:gap-8 py-6 border-t border-offwhite/10 items-baseline"
-            >
-              <span className="font-mono text-brass text-sm">{n}</span>
+            <div key={n} className="reveal grid md:grid-cols-[3rem_10rem_1fr_1fr] gap-4 md:gap-8 py-6 border-t border-white/10 items-baseline">
+              <span className="font-mono text-white text-sm">{n}</span>
               <div>
                 <p className="font-display text-lg">{title}</p>
-                <p className="font-mono text-xs text-[#7C8595]">{time}</p>
+                <p className="font-mono text-xs text-white/50">{time}</p>
               </div>
-              <p className="text-sm text-[#C7CDD6] leading-relaxed">{activity}</p>
-              <p className="text-sm text-[#7C8595] leading-relaxed">{why}</p>
+              <p className="text-sm text-white/70 leading-relaxed">{activity}</p>
+              <p className="text-sm text-white/50 leading-relaxed">{why}</p>
             </div>
           ))}
         </div>
@@ -226,8 +224,8 @@ export function Proof() {
         <SectionHeading eyebrow="05 · Proof" title="Built to be measured, not taken on faith." />
         <div className="grid sm:grid-cols-2 gap-6">
           {items.map((it) => (
-            <div key={it.title} className="reveal border border-steel/20 rounded-md p-6 bg-offwhite">
-              <it.icon className="w-5 h-5 text-brass mb-4" strokeWidth={1.5} />
+            <div key={it.title} className="reveal border border-black/15 rounded-md p-6 bg-white">
+              <it.icon className="w-5 h-5 text-black mb-4" strokeWidth={1.5} />
               <h3 className="font-display text-lg mb-2">{it.title}</h3>
               <p className="text-steel text-sm leading-relaxed">{it.body}</p>
             </div>
@@ -248,21 +246,19 @@ export function WhyVentra() {
     "Scalable capacity — from pilot cases to 100+ per day without diluting turnaround.",
   ];
   return (
-    <section className="bg-ink text-offwhite py-20 md:py-28">
+    <section className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="reveal eyebrow text-brass mb-4">08 · Why Ventra</p>
-        <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">
-          Not features. Position.
-        </h2>
-        <p className="reveal text-[#C7CDD6] max-w-xl mb-12 leading-relaxed">
+        <p className="reveal eyebrow text-white/70 mb-4">08 · Why Ventra</p>
+        <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">Not features. Position.</h2>
+        <p className="reveal text-white/70 max-w-xl mb-12 leading-relaxed">
           We separate clinical judgment from documentation execution. Reviewers
           decide. Ventra writes. We reduce cost per decision, not just cost per case.
         </p>
         <div className="grid sm:grid-cols-2 gap-5">
           {items.map((t) => (
             <div key={t} className="reveal flex gap-3">
-              <Layers className="w-5 h-5 text-brass shrink-0 mt-0.5" strokeWidth={1.5} />
-              <p className="text-sm text-[#C7CDD6] leading-relaxed">{t}</p>
+              <Layers className="w-5 h-5 text-white shrink-0 mt-0.5" strokeWidth={1.5} />
+              <p className="text-sm text-white/70 leading-relaxed">{t}</p>
             </div>
           ))}
         </div>
@@ -277,17 +273,15 @@ export function CTA() {
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-4xl px-6 md:px-10 text-center">
         <div className="reveal">
-          <Stethoscope className="w-8 h-8 text-brass mx-auto mb-6" strokeWidth={1.5} />
-          <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
-            A clear path to partnership.
-          </h2>
+          <Stethoscope className="w-8 h-8 text-black mx-auto mb-6" strokeWidth={1.5} />
+          <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">A clear path to partnership.</h2>
           <p className="text-steel max-w-xl mx-auto mb-10 leading-relaxed">
             Discovery call → NDA/BAA → 10–25 pilot cases → quality review →
             volume agreement. Reach out to schedule a discovery call.
           </p>
           <a
             href="mailto:admin@ventrahealthsystems.com"
-            className="inline-flex items-center gap-2 bg-ink text-offwhite px-7 py-4 rounded-sm hover:bg-brass hover:text-ink transition-colors font-medium"
+            className="inline-flex items-center gap-2 bg-ink text-white px-7 py-4 rounded-sm hover:bg-black/80 transition-colors font-medium"
           >
             Start the conversation <ArrowRight className="w-4 h-4" />
           </a>

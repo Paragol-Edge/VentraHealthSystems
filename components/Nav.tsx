@@ -1,6 +1,7 @@
 "use client";
-import Image from "next/image";
+
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
@@ -15,29 +16,40 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-paper/90 backdrop-blur border-b border-steel/15">
+    <header className="sticky top-0 z-50 bg-white border-b border-black/10">
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 font-display text-lg tracking-tight">
-          <Image src="/logo.png" alt="Ventra" width={72} height={72} />
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo1.png"
+            alt="Ventra Health Systems"
+            width={200}
+            height={200}
+            className="h-24 w-auto"
+            priority
+          />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8 font-mono text-xs tracking-widest2 uppercase">
+        <nav className="hidden md:flex items-center gap-8 font-mono text-xs tracking-widest2 uppercase text-black">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className="hover:text-brass transition-colors">
+            <Link key={l.href} href={l.href} className="hover:opacity-60 transition-opacity">
               {l.label}
             </Link>
           ))}
         </nav>
 
-        <button className="md:hidden" onClick={() => setOpen(!open)} aria-label={open ? "Close menu" : "Open menu"}>
+        <button
+          className="md:hidden text-black"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Close menu" : "Open menu"}
+        >
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
       {open && (
-        <nav className="md:hidden flex flex-col gap-1 px-6 pb-6 font-mono text-sm uppercase tracking-widest2">
+        <nav className="md:hidden flex flex-col gap-1 px-6 pb-6 font-mono text-sm uppercase tracking-widest2 text-black">
           {links.map((l) => (
-            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3 border-b border-steel/10">
+            <Link key={l.href} href={l.href} onClick={() => setOpen(false)} className="py-3 border-b border-black/10">
               {l.label}
             </Link>
           ))}

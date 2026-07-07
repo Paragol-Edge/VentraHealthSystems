@@ -13,27 +13,23 @@ html {
 }
 
 body {
-  background-color: #edefea;
-  color: #0e1524;
+  background-color: #f5f5f3;
+  color: #0a0a0a;
 }
 
-/* Redaction bars used across the site to represent masked identity fields */
 .redact-bar {
   background-color: #0a0a0a;
   border-radius: 2px;
   display: inline-block;
 }
 
-/* Focus visibility kept intentionally strong — this is a compliance-facing product */
 :focus-visible {
-  outline: 2px solid #c08a2e;
+  outline: 2px solid #0a0a0a;
   outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.001ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;

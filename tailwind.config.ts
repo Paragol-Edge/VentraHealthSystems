@@ -4,7 +4,13 @@ const config: Config = {
   content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
     extend: {
-      colors: { ink: "#0E1524", paper: "#EDEFEA", steel: "#3B4759", brass: "#C08A2E", redact: "#0A0A0A", offwhite: "#FAFAF8" },
+      colors: {
+        ink: "#0A0A0A",       
+        paper: "#F5F5F3",     
+        offwhite: "#FFFFFF",  
+        steel: "#6B6B6B",    
+        brass: "#0A0A0A",     
+      },
       fontFamily: {
         display: ["var(--font-fraunces)", "serif"],
         body: ["var(--font-plex-sans)", "sans-serif"],

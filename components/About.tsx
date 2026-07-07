@@ -69,7 +69,6 @@ function Origin() {
         <ImageBand
           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
           alt="Laptop and stethoscope on a desk, representing clinical documentation work"
-
           caption="Documentation execution, handled by a dedicated physician team so your reviewers are left with exactly one job."
         />
       </div>
