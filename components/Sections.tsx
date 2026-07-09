@@ -10,6 +10,7 @@ import {
   Users,
   ArrowRight,
   CheckCircle2,
+  Check,
   Building2,
   ShieldCheck,
   ClipboardCheck,
@@ -120,6 +121,58 @@ export function Solution() {
   );
 }
 
+export function CaseFileSummary() {
+  const ref = useReveal<HTMLDivElement>();
+  const fileItems = [
+    {
+      title: "File Summary",
+      detail:
+        "Office visits, laboratory and radiologic reports, surveillance report, appeal letters, functional capacity evaluations, attending physician statement.",
+    },
+    { title: "Clinical Summary", detail: "" },
+    { title: "Rationale", detail: "Based on supported findings." },
+    { title: "Draft Restrictions and Limitations / Draft Opinion", detail: "" },
+    { title: "Other Questions Posed by the Client", detail: "" },
+  ];
+
+  return (
+    <section className="bg-paper py-20 md:py-28">
+      <div ref={ref} className="mx-auto max-w-5xl px-6 md:px-10">
+        <SectionHeading eyebrow="The Deliverable" title="One file structure, considered end to end, every time." />
+        <div className="reveal border border-black/15 rounded-md bg-white overflow-hidden">
+          <div className="px-6 py-4 border-b border-black/10 flex items-center justify-between">
+            <p className="font-mono text-[10px] tracking-widest2 uppercase text-black/60">
+              Draft — Clinical Review File
+            </p>
+            <p className="font-mono text-[10px] text-black/40">Confidential</p>
+          </div>
+
+          <div>
+            {fileItems.map((item, i) => (
+              <div key={item.title} className={`flex gap-4 px-6 py-5 ${i !== 0 ? "border-t border-black/10" : ""}`}>
+                <div className="mt-0.5 shrink-0 w-5 h-5 rounded-sm border border-black flex items-center justify-center">
+                  <Check className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <p className="font-display text-base">{item.title}</p>
+                  {item.detail && <p className="text-sm text-steel leading-relaxed mt-1">{item.detail}</p>}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="px-6 py-6 border-t border-black/10 flex items-center gap-4">
+            <p className="font-mono text-[10px] uppercase tracking-widest2 text-black/60 shrink-0">
+              Reviewer Signature
+            </p>
+            <div className="flex-1 border-b border-black/40 h-6" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function TrustBand() {
   const ref = useReveal<HTMLDivElement>();
   return (
@@ -179,42 +232,6 @@ export function Transformation() {
   );
 }
 
-export function Process() {
-  const ref = useReveal<HTMLDivElement>();
-  const stages = [
-    ["01", "Case Intake", "T+0", "Partner submits records via secure portal.", "Clean, timestamped SLA start."],
-    ["02", "Specialty Triage", "T+1hr", "Case assigned to a specialty-aligned writer.", "Reduces misinterpretation risk."],
-    ["03", "Record Analysis", "T+4–8hrs", "Findings mapped to applicable guidelines.", "Grounds the draft in evidence."],
-    ["04", "Draft Production", "T+8–16hrs", "Structured narrative: summary, reasoning, conclusion.", "Built for endorsement, not reconstruction."],
-    ["05", "QC Review", "T+16–20hrs", "Senior physician reviews accuracy and defensibility.", "Where appeal exposure gets designed out."],
-    ["06", "Delivery", "T+24hrs", "Final draft returned. No Ventra identifiers.", "Protects the white-label guarantee."],
-    ["07", "Clarification", "T+26hrs", "No-charge clarification within the SLA window.", "No gap where a case can stall."],
-  ];
-  return (
-    <section id="process" className="bg-ink text-white py-20 md:py-28">
-      <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="reveal eyebrow text-white/70 mb-4">06 · Process</p>
-        <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-14 max-w-2xl">
-          Built for clinical rigor at scale.
-        </h2>
-        <div className="space-y-0">
-          {stages.map(([n, title, time, activity, why]) => (
-            <div key={n} className="reveal grid md:grid-cols-[3rem_10rem_1fr_1fr] gap-4 md:gap-8 py-6 border-t border-white/10 items-baseline">
-              <span className="font-mono text-white text-sm">{n}</span>
-              <div>
-                <p className="font-display text-lg">{title}</p>
-                <p className="font-mono text-xs text-white/50">{time}</p>
-              </div>
-              <p className="text-sm text-white/70 leading-relaxed">{activity}</p>
-              <p className="text-sm text-white/50 leading-relaxed">{why}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 export function Proof() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
@@ -253,7 +270,7 @@ export function WhyVentra() {
   return (
     <section className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="reveal eyebrow text-white/70 mb-4">08 · Why Ventra</p>
+        <p className="reveal eyebrow text-white/70 mb-4">07 · Why Ventra</p>
         <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">Not features. Position.</h2>
         <p className="reveal text-white/70 max-w-xl mb-12 leading-relaxed">
           We separate clinical judgment from documentation execution. Reviewers

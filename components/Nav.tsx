@@ -20,11 +20,11 @@ export default function Nav() {
       <div className="mx-auto max-w-7xl px-6 md:px-10 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo1.png"
+            src="/logo.png"
             alt="Ventra Health Systems"
             width={200}
             height={200}
-            className="h-24 w-auto"
+            className="h-14 w-auto"
             priority
           />
         </Link>
