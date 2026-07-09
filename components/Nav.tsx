@@ -24,7 +24,7 @@ export default function Nav() {
             alt="Ventra Health Systems"
             width={200}
             height={200}
-            className="h-14 w-auto"
+            className="h-16 w-auto"
             priority
           />
         </Link>

@@ -98,7 +98,7 @@ export function Solution() {
     <section id="solution" className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10 grid md:grid-cols-2 gap-14 items-start">
         <div className="reveal">
-          <p className="eyebrow text-white/70 mb-4">03 · The Solution</p>
+          <p className="eyebrow text-white/70 mb-4">02 · The Solution</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
             Ventra is the documentation layer for clinical review operations.
           </h2>
@@ -270,7 +270,7 @@ export function WhyVentra() {
   return (
     <section className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <p className="reveal eyebrow text-white/70 mb-4">07 · Why Ventra</p>
+        <p className="reveal eyebrow text-white/70 mb-4">06 · Why Ventra</p>
         <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">Not features. Position.</h2>
         <p className="reveal text-white/70 max-w-xl mb-12 leading-relaxed">
           We separate clinical judgment from documentation execution. Reviewers
