@@ -185,7 +185,7 @@ export function TrustBand() {
               alt="Physicians walking through a hospital corridor"
               fill
               className="object-cover grayscale"
-              sizes="(max-width: 768px) 120vw, 1200px"
+              sizes="(max-width: 850px) 120vw, 1200px"
             />
           </div>
           <div className="p-4 bg-white">
