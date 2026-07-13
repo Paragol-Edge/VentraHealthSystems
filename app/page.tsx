@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import {
   Problem,
   Solution,
-  CaseFileSummary,
+  // CaseFileSummary,
   TrustBand,
   Transformation,
   Proof,
@@ -16,7 +16,7 @@ export default function Home() {
       <Hero />
       <Problem />
       <Solution />
-      <CaseFileSummary />
+      {/* <CaseFileSummary /> */}
       <TrustBand />
       <Transformation />
       <Proof />

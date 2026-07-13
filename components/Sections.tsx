@@ -10,7 +10,7 @@ import {
   Users,
   ArrowRight,
   CheckCircle2,
-  Check,
+  // Check,
   Building2,
   ShieldCheck,
   ClipboardCheck,
@@ -121,57 +121,57 @@ export function Solution() {
   );
 }
 
-export function CaseFileSummary() {
-  const ref = useReveal<HTMLDivElement>();
-  const fileItems = [
-    {
-      title: "File Summary",
-      detail:
-        "Office visits, laboratory and radiologic reports, surveillance report, appeal letters, functional capacity evaluations, attending physician statement.",
-    },
-    { title: "Clinical Summary", detail: "" },
-    { title: "Rationale", detail: "Based on supported findings." },
-    { title: "Draft Restrictions and Limitations / Draft Opinion", detail: "" },
-    { title: "Other Questions Posed by the Client", detail: "" },
-  ];
+// export function CaseFileSummary() {
+//   const ref = useReveal<HTMLDivElement>();
+//   const fileItems = [
+//     {
+//       title: "File Summary",
+//       detail:
+//         "Office visits, laboratory and radiologic reports, surveillance report, appeal letters, functional capacity evaluations, attending physician statement.",
+//     },
+//     { title: "Clinical Summary", detail: "" },
+//     { title: "Rationale", detail: "Based on supported findings." },
+//     { title: "Draft Restrictions and Limitations / Draft Opinion", detail: "" },
+//     { title: "Other Questions Posed by the Client", detail: "" },
+//   ];
 
-  return (
-    <section className="bg-paper py-20 md:py-28">
-      <div ref={ref} className="mx-auto max-w-5xl px-6 md:px-10">
-        <SectionHeading eyebrow="The Deliverable" title="One file structure, considered end to end, every time." />
-        <div className="reveal border border-black/15 rounded-md bg-white overflow-hidden">
-          <div className="px-6 py-4 border-b border-black/10 flex items-center justify-between">
-            <p className="font-mono text-[10px] tracking-widest2 uppercase text-black/60">
-              Draft — Clinical Review File
-            </p>
-            <p className="font-mono text-[10px] text-black/40">Confidential</p>
-          </div>
+//   return (
+//     <section className="bg-paper py-20 md:py-28">
+//       <div ref={ref} className="mx-auto max-w-5xl px-6 md:px-10">
+//         <SectionHeading eyebrow="The Deliverable" title="One file structure, considered end to end, every time." />
+//         <div className="reveal border border-black/15 rounded-md bg-white overflow-hidden">
+//           <div className="px-6 py-4 border-b border-black/10 flex items-center justify-between">
+//             <p className="font-mono text-[10px] tracking-widest2 uppercase text-black/60">
+//               Draft — Clinical Review File
+//             </p>
+//             <p className="font-mono text-[10px] text-black/40">Confidential</p>
+//           </div>
 
-          <div>
-            {fileItems.map((item, i) => (
-              <div key={item.title} className={`flex gap-4 px-6 py-5 ${i !== 0 ? "border-t border-black/10" : ""}`}>
-                <div className="mt-0.5 shrink-0 w-5 h-5 rounded-sm border border-black flex items-center justify-center">
-                  <Check className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
-                </div>
-                <div>
-                  <p className="font-display text-base">{item.title}</p>
-                  {item.detail && <p className="text-sm text-steel leading-relaxed mt-1">{item.detail}</p>}
-                </div>
-              </div>
-            ))}
-          </div>
+//           <div>
+//             {fileItems.map((item, i) => (
+//               <div key={item.title} className={`flex gap-4 px-6 py-5 ${i !== 0 ? "border-t border-black/10" : ""}`}>
+//                 <div className="mt-0.5 shrink-0 w-5 h-5 rounded-sm border border-black flex items-center justify-center">
+//                   <Check className="w-3.5 h-3.5 text-black" strokeWidth={2.5} />
+//                 </div>
+//                 <div>
+//                   <p className="font-display text-base">{item.title}</p>
+//                   {item.detail && <p className="text-sm text-steel leading-relaxed mt-1">{item.detail}</p>}
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
 
-          <div className="px-6 py-6 border-t border-black/10 flex items-center gap-4">
-            <p className="font-mono text-[10px] uppercase tracking-widest2 text-black/60 shrink-0">
-              Reviewer Signature
-            </p>
-            <div className="flex-1 border-b border-black/40 h-6" />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+//           <div className="px-6 py-6 border-t border-black/10 flex items-center gap-4">
+//             <p className="font-mono text-[10px] uppercase tracking-widest2 text-black/60 shrink-0">
+//               Reviewer Signature
+//             </p>
+//             <div className="flex-1 border-b border-black/40 h-6" />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 export function TrustBand() {
   const ref = useReveal<HTMLDivElement>();
@@ -185,7 +185,7 @@ export function TrustBand() {
               alt="Physicians walking through a hospital corridor"
               fill
               className="object-cover grayscale"
-              sizes="(max-width: 768px) 100vw, 1200px"
+              sizes="(max-width: 768px) 120vw, 1200px"
             />
           </div>
           <div className="p-4 bg-white">
