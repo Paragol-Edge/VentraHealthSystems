@@ -179,9 +179,9 @@ export function TrustBand() {
     <section className="bg-paper py-16">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="reveal relative rounded-md overflow-hidden border border-black/15">
-          <div className="relative w-full h-64 md:h-80">
+          <div className="relative w-[700px] md:w-full h-64 md:h-[700px]">
             <Image
-              src="https://images.unsplash.com/photo-1516841273335-e39b37888115?auto=format&fit=crop&w=1600&q=80"
+              src="/img1.jpg"
               alt="Physicians walking through a hospital corridor"
               fill
               className="object-cover grayscale"
@@ -190,7 +190,7 @@ export function TrustBand() {
           </div>
           <div className="p-4 bg-white">
             <p className="text-sm text-steel">
-              A dedicated physician team executes documentation — your
+              A dedicated physician executes documentation — your
               reviewers keep full clinical authority and final sign-off on
               every case.
             </p>
@@ -297,9 +297,10 @@ export function CTA() {
           <Stethoscope className="w-8 h-8 text-black mx-auto mb-6" strokeWidth={1.5} />
           <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">A clear path to partnership.</h2>
           <p className="text-steel max-w-xl mx-auto mb-10 leading-relaxed">
-            Discovery call → NDA/BAA → 10–25 pilot cases → quality review →
-            volume agreement. Reach out to schedule a discovery call.
+            Discovery call → NDA → 10–25 pilot cases → quality review →
+            volume agreement. 
           </p>
+          <p className="my-3 text-steel">Reach out to schedule a discovery call.</p>
           <a
             href="mailto:admin@ventrahealthsystems.com"
             className="inline-flex items-center gap-2 bg-ink text-white px-7 py-4 rounded-sm hover:bg-black/80 transition-colors font-medium"
