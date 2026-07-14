@@ -67,7 +67,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-3 mb-10">
-          <a  
+            <a
               href="/contact"
               className="bg-white text-ink font-medium px-6 py-3 rounded-sm hover:bg-white/85 transition-colors"
             >
@@ -79,17 +79,26 @@ export default function Hero() {
             >
               See how it works
             </a>
-            <p className="mt-2 text-white/70">
-              Fixed turnaround, dual-physician QC on every case, zero Ventra
-              identifiers in what you deliver.
-            </p>
           </div>
 
           <div className="flex flex-wrap gap-8 font-mono text-xs">
-            <div className="flex items-center gap-2">
+            <div className="group relative flex items-center gap-2 cursor-default">
               <Clock className="w-4 h-4 text-white" strokeWidth={1.5} />
               36H TURNAROUND
+
+              <p
+                className="pointer-events-none absolute left-0 top-full mt-2 w-64 
+                           bg-[#161616] border border-white/10 rounded-md p-3 
+                           text-white/70 font-sans text-xs leading-relaxed normal-case tracking-normal
+                           opacity-0 -translate-y-1 
+                           group-hover:opacity-100 group-hover:translate-y-0 
+                           transition-all duration-200 ease-out z-10"
+              >
+                Fixed turnaround, dual-physician QC on every case, zero Ventra
+                identifiers in what you deliver.
+              </p>
             </div>
+
             <div className="flex items-center gap-2">
               <ShieldCheck className="w-4 h-4 text-white" strokeWidth={1.5} />
               100% PHYSICIAN-AUTHORED
