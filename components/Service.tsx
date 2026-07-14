@@ -2,7 +2,18 @@
 
 import Image from "next/image";
 import { useReveal, SectionHeading } from "@/components/ui";
-import { FileText, ShieldCheck, Clock, Layers, ArrowRight, HelpCircle } from "lucide-react";
+import {
+  FileText,
+  ShieldCheck,
+  Clock,
+  Layers,
+  ArrowRight,
+  HelpCircle,
+  Stethoscope,
+  Brain,
+  Bone,
+  HeartPulse,
+} from "lucide-react";
 
 export default function ServiceContent() {
   return (
@@ -104,16 +115,29 @@ function Included() {
 
 function SpecialtyGrid() {
   const ref = useReveal<HTMLDivElement>();
-  
+  const specialties = [
+    { icon: Stethoscope, title: "General & Internal Medicine", body: "Routine and complex cases across primary care, chronic condition management, and general diagnostics." },
+    { icon: Brain, title: "Neurology & Psychiatry", body: "Cases requiring nuanced assessment of cognitive, neurological, and behavioral health findings." },
+    { icon: Bone, title: "Orthopedics & Musculoskeletal", body: "Functional capacity evaluations, injury claims, and post-surgical documentation." },
+    { icon: HeartPulse, title: "Cardiology & Complex Comorbidities", body: "Multi-system cases requiring specialist-level reasoning and guideline-mapped conclusions." },
+  ];
   return (
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <SectionHeading eyebrow="Specialty Depth" title="Every Case, The Right Expertise." />
-        <div className="reveal rounded-md overflow-hidden">
-          <p className="text-4xl">Whether routine or highly complex,
-             <br /> each case is assigned to a physician with <br /> the appropriate specialty expertise,
-              <br /> delivering consistent,
-            <br /> high-quality documentation <br /> across all clinical domains.</p>
+        <SectionHeading eyebrow="Specialty Depth" title="Every case, the right expertise." />
+        <p className="reveal text-steel leading-relaxed max-w-2xl mb-10">
+          Whether routine or highly complex, each case is assigned to a
+          physician with the appropriate specialty expertise — delivering
+          consistent, high-quality documentation across all clinical domains.
+        </p>
+        <div className="grid sm:grid-cols-2 gap-6">
+          {specialties.map((it) => (
+            <div key={it.title} className="reveal border border-steel/20 rounded-md p-6 bg-offwhite">
+              <it.icon className="w-5 h-5 text-brass mb-4" strokeWidth={1.5} />
+              <h3 className="font-display text-lg mb-2">{it.title}</h3>
+              <p className="text-steel text-sm leading-relaxed">{it.body}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
