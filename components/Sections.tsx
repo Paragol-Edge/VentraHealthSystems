@@ -63,10 +63,10 @@ function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; title: stri
 export function Problem() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: Users, title: "Reviewer fatigue drives turnover", body: "High-volume documentation work erodes clinical focus and accelerates burnout among your most credentialed physicians." },
-    { icon: AlertTriangle, title: "Inconsistent narratives create appeal exposure", body: "In lines where appeal rates already run 15–20%, language quality varying by reviewer is the difference between a defensible file and a costly one." },
-    { icon: FileWarning, title: "Weak documentation becomes downstream liability", body: "Narratives not structured for audit or litigation fail later — when a case is already in dispute and a rewrite is most expensive." },
-    { icon: Gauge, title: "Physician writing time inflates cost per case", body: "Every hour a reviewer spends formatting a narrative is an hour not spent on the judgment your organization is paid for." },
+    { icon: Users, title: "Reviewer Fatigue drives burnout, turnover, and inconsistent decisions ", body: "Heavy documentation workloads reduce clinical focus, increase physician attrition, and compromise review quality over time." },
+    { icon: AlertTriangle, title: "Inconsitent documentation increases appeal risk", body: "Variation in narrative quality creates avoidable exposure, especially in high-volume review environments where consistency is critical." },
+    { icon: FileWarning, title: " Poor documentation becomes a downstream liability.", body: "Reports that are not structured for audit or litigation create risk when cases are challenged—when corrections are mostly costly." },
+    { icon: Gauge, title: "Documentation work inflates cost per clinical decision", body: "Every hour spent drafting reports is an hour diverted from the clinical expertise your organization is paid to deliver." },
   ];
   return (
     <section className="bg-paper py-20 md:py-28">
@@ -89,10 +89,11 @@ export function Problem() {
 export function Solution() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    "Eliminates the clinical rewriting loop — drafts arrive reviewer-ready.",
-    "Standardizes narrative quality against one guideline-mapped structure.",
-    "Removes hiring as the constraint on volume — capacity scales with case count.",
-    "Redirects physician hours from formatting to the decisions clients pay for.",
+    "Reviewer-ready drafts that eliminate the clinical rewriting cycle. ",
+    "⁠Consistent, guideline-aligned documentation across every case.",
+    " ⁠Capacity that scales seamlessly with demand-without adding documentation burden.",
+    "More physician time dedicated to clinical judgement, not report writing.",
+    "⁠Completely white-label—no Ventra Branding, NDA-first engagement.",
   ];
   return (
     <section id="solution" className="bg-ink text-white py-20 md:py-28">
@@ -100,12 +101,14 @@ export function Solution() {
         <div className="reveal">
           <p className="eyebrow text-white/70 mb-4">02 · The Solution</p>
           <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
-            Ventra is the documentation layer for clinical review operations.
+            Ventra is the invisible engine behind high-performing clinical review teams.
           </h2>
           <p className="text-white/70 leading-relaxed">
-            Not a staffing vendor. Not an outsourcing shop. Infrastructure that
-            sits behind your review operation, absorbing documentation
-            execution so your reviewers are left with exactly one job: deciding.
+            Not a staffing vendor. Not an outsourcing firm. 
+            Ventra works entirely behind your organization,
+             executing documentation while remaining invisible to your clients.
+             Your reviewers retain clinical ownership. 
+             Your organization revieves the credit.
           </p>
         </div>
         <ul className="space-y-5">
@@ -190,9 +193,9 @@ export function TrustBand() {
           </div>
           <div className="p-4 bg-white">
             <p className="text-sm text-steel">
-              A dedicated physician executes documentation — your
-              reviewers keep full clinical authority and final sign-off on
-              every case.
+              Documentation is executed entirely behind your organization by dedicated physicians.
+               Your reviewers make the decisions, 
+              provide the final sign-off, and your clients never know Ventra exists.
             </p>
           </div>
         </div>
@@ -204,9 +207,9 @@ export function TrustBand() {
 export function Transformation() {
   const ref = useReveal<HTMLDivElement>();
   const rows = [
-    ["Reviewers split time between judgment and writing", "Reviewers spend their time on decisions — writing fully offloaded"],
-    ["Narrative quality and structure vary by reviewer", "Every draft follows one standardized, guideline-mapped structure"],
-    ["Documentation defensibility is inconsistent across cases", "Every draft passes a dedicated QC review for appeal and audit defensibility"],
+    ["Reviewers focus exclusively on clinical judgement while documentation is fully offloaded"],
+    ["Every draft is standardized, guidline-aligned, and consistently structured"],
+    ["Every draft undergoes independent quality review to ensure audit and appeal readiness"],
     ];
   return (
     <section className="bg-paper py-20 md:py-28">

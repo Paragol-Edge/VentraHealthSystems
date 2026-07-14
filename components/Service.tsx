@@ -9,7 +9,7 @@ export default function ServiceContent() {
     <main>
       <ServiceHero />
       <Included />
-      <Pathway />
+      {/* <Pathway /> */}
       <SpecialtyGrid />
       <Pricing />
       <FAQ />
@@ -74,55 +74,46 @@ function Included() {
   );
 }
 
-function Pathway() {
-  const ref = useReveal<HTMLDivElement>();
-  const stages = [
-    ["01", "Intake", "T+0"],
-    ["02", "Triage", "T+1hr"],
-    ["03", "Analysis", "T+4–8hrs"],
-    ["04", "Drafting", "T+8–16hrs"],
-    ["05", "QC", "T+16–20hrs"],
-    ["06", "Delivery", "T+24hrs"],
-  ];
-  return (
-    <section className="bg-ink text-offwhite py-20 md:py-28">
-      <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <SectionHeading eyebrow="Case Pathway" title="A timeline built to be tracked." dark />
-        <div className="reveal grid grid-cols-3 md:grid-cols-6 gap-4">
-          {stages.map(([n, title, time]) => (
-            <div key={n} className="border-t border-brass pt-4">
-              <p className="font-mono text-brass text-xs mb-1">{n}</p>
-              <p className="font-display text-base">{title}</p>
-              <p className="font-mono text-[10px] text-[#7C8595]">{time}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+// function Pathway() {
+//   const ref = useReveal<HTMLDivElement>();
+//   const stages = [
+//     ["01", "Intake", "T+0"],
+//     ["02", "Triage", "T+1hr"],
+//     ["03", "Analysis", "T+4–8hrs"],
+//     ["04", "Drafting", "T+8–16hrs"],
+//     ["05", "QC", "T+16–20hrs"],
+//     ["06", "Delivery", "T+24hrs"],
+//   ];
+//   return (
+//     <section className="bg-ink text-offwhite py-20 md:py-28">
+//       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
+//         <SectionHeading eyebrow="Case Pathway" title="A timeline built to be tracked." dark />
+//         <div className="reveal grid grid-cols-3 md:grid-cols-6 gap-4">
+//           {stages.map(([n, title, time]) => (
+//             <div key={n} className="border-t border-brass pt-4">
+//               <p className="font-mono text-brass text-xs mb-1">{n}</p>
+//               <p className="font-display text-base">{title}</p>
+//               <p className="font-mono text-[10px] text-[#7C8595]">{time}</p>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function SpecialtyGrid() {
   const ref = useReveal<HTMLDivElement>();
-  const rows = [
-    ["Orthopedics", "MSK injury, surgical necessity"],
-    ["Cardiology", "Cardiac risk and intervention review"],
-    ["Neurology", "Neurological injury and treatment necessity"],
-    ["Pulmonology", "Respiratory and occupational exposure cases"],
-    ["Occupational Medicine", "Workers' comp and fitness-for-duty review"],
-    ["Gastroenterology", "GI diagnostic and treatment necessity"],
-  ];
+  
   return (
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <SectionHeading eyebrow="Specialty Depth" title="Case complexity, matched to writer expertise." />
-        <div className="reveal border border-steel/20 rounded-md overflow-hidden">
-          {rows.map(([spec, desc]) => (
-            <div key={spec} className="grid sm:grid-cols-2 border-t border-steel/15 first:border-0">
-              <div className="p-4 font-display">{spec}</div>
-              <div className="p-4 text-sm text-steel">{desc}</div>
-            </div>
-          ))}
+        <SectionHeading eyebrow="Specialty Depth" title="Every Case, The Right Expertise." />
+        <div className="reveal rounded-md overflow-hidden">
+          <p className="text-4xl">Whether routine or highly complex,
+             <br /> each case is assigned to a physician with <br /> the appropriate specialty expertise,
+              <br /> delivering consistent,
+            <br /> high-quality documentation <br /> across all clinical domains.</p>
         </div>
       </div>
     </section>

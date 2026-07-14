@@ -13,7 +13,7 @@ export default function Contact() {
         <Mail className="w-8 h-8 text-brass mx-auto mb-6" strokeWidth={1.5} />
         <h1 className="font-display text-3xl md:text-4xl mb-6">Let's start the conversation.</h1>
         <p className="text-steel mb-10 leading-relaxed">
-          Reach out to schedule a discovery call or ask any questions about a pilot engagement.
+          Reach out to schedule a discovery conversation or ask any questions about a pilot engagement.
         </p>
         <a
           href="mailto:admin@ventrahealthsystems.com"

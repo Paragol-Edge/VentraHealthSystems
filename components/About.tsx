@@ -166,7 +166,7 @@ function Specialties() {
   return (
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <SectionHeading eyebrow="Coverage" title="Specialty depth matched to case complexity." />
+        <SectionHeading eyebrow="Coverage" title="Expertise across all major medical specialties, including orthopedics, cardiology, neurology, pulmonology, occupational medicine, gastroenterology, general surgery, and more." />
         <div className="reveal flex flex-wrap gap-3">
           {specialties.map((s) => (
             <span key={s} className="border border-steel/25 rounded-full px-5 py-2 text-sm font-mono">
