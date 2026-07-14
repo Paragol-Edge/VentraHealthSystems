@@ -232,15 +232,15 @@ export function Transformation() {
 export function Proof() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: ClipboardCheck, title: "24-hour standard turnaround", body: "Written into the SLA — a contractual commitment, not a target." },
-    { icon: ShieldCheck, title: "100% dual-physician review", body: "Every draft is written by one physician and independently reviewed by a senior physician before delivery." },
-    { icon: Gauge, title: "Revision rate under 10%, tracked from day one", body: "Drafts are built to be endorsed, not rewritten. Edit-rate data is yours to see." },
-    { icon: Building2, title: "The pilot is the proof", body: "10–25 cases at standard rates, before any volume commitment." },
+    { icon: ClipboardCheck, title: "36-hour standard turnaround", body: "Contractually submitted in the SLA — not just a service target." },
+    { icon: ShieldCheck, title: "100% dual-physician review", body: "Every draft is authored by a physician and independently reviewed before delivery." },
+    { icon: Gauge, title: "Revision rate under 10%, tracked from day one", body: "Drafts are built to be signed off, not rewritten." },
+    { icon: Building2, title: "The pilot is the proof", body: " Start with 10–25 cases at standard rates to validate quality before any volume commitment." },
   ];
   return (
     <section id="proof" className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
-        <SectionHeading eyebrow="05 · Proof" title="Built to be measured, not taken on faith." />
+        <SectionHeading eyebrow="05 · Proof" title="Performance you can measure." />
         <div className="grid sm:grid-cols-2 gap-6">
           {items.map((it) => (
             <div key={it.title} className="reveal border border-black/15 rounded-md p-6 bg-white">
