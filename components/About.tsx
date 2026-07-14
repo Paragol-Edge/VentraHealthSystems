@@ -79,10 +79,10 @@ function Origin() {
 function Values() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: Compass, title: "Judgment stays yours", body: "Your reviewers keep full clinical authority and final sign-off on every case, always." },
-    { icon: ShieldCheck, title: "Defensible by design", body: "Every narrative is structured against current guideline standards before it reaches a reviewer." },
-    { icon: HeartHandshake, title: "True white-label", body: "NDA executed before any work begins. Zero Ventra identifiers in delivered documents." },
-    { icon: Layers, title: "Built to scale quietly", body: "Capacity scales with case volume, not headcount — without diluting turnaround or quality." },
+    { icon: Compass, title: "Clinical Authority Remains Yours", body: "Your reviewers retain full clinical ownership, decision-making authority, and final sign-off on every case." },
+    { icon: ShieldCheck, title: " Consistent Reviewer-ready Documentation", body: "Every draft is physician-authored, quality-reviewed, and delivered in a standardized, guideline-aligned format." },
+    { icon: HeartHandshake, title: " Completely Invisible", body: "NDA-first engagement. Fully white-label. Every deliverable is branded as your own own, we stay invisible while you remain the trusted face of the work." },
+    { icon: Layers, title: "Quality that scales", body: "As volume grows, documentation quality, consistency, and turnaround remain unchanged." },
   ];
   return (
     <section className="bg-ink text-offwhite py-20 md:py-28">
@@ -91,7 +91,7 @@ function Values() {
         <div className="grid sm:grid-cols-2 gap-6">
           {items.map((it) => (
             <div key={it.title} className="reveal border border-offwhite/15 rounded-md p-6">
-              <it.icon className="w-5 h-5 text-brass mb-4" strokeWidth={1.5} />
+              <it.icon className="w-5 h-5 text-white mb-4" strokeWidth={1.5} />
               <h3 className="font-display text-lg mb-2">{it.title}</h3>
               <p className="text-[#C7CDD6] text-sm leading-relaxed">{it.body}</p>
             </div>
