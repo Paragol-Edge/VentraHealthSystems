@@ -258,17 +258,16 @@ export function Proof() {
 export function WhyVentra() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    "Physician-led authorship, every draft ECFMG-certified or U.S.-licensed.",
-    "Defensible by design against current guideline standards.",
-    "True white-label — NDA before any work begins, zero Ventra identifiers.",
-    "Specialty depth across orthopedics, cardiology, neurology, pulmonology, occupational medicine, GI, general surgery.",
-    "Scalable capacity — from pilot cases to 100+ per day without diluting turnaround.",
+    "Physician-led authorship, every draft ECFMG-certified.",
+    "Strictly confidential — NDA first, fully white label, no Ventra presence.",
+    "Deep expertise across medical specialties.",
+    "Built to scale without compromising quality, consistency or turn around.",
   ];
   return (
     <section className="bg-ink text-white py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
         <p className="reveal eyebrow text-white/70 mb-4">06 · Why Ventra</p>
-        <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">Not features. Position.</h2>
+        <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">The Ventra Difference</h2>
         <p className="reveal text-white/70 max-w-xl mb-12 leading-relaxed">
           We separate clinical judgment from documentation execution. Reviewers
           decide. Ventra writes. We reduce cost per decision, not just cost per case.
