@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useReveal, SectionHeading, ImageBand } from "@/components/ui";
-import { Compass, HeartHandshake, ShieldCheck, Layers, Stethoscope, ArrowRight } from "lucide-react";
+import { Compass, HeartHandshake, ShieldCheck, Layers, } from "lucide-react";
 
 export default function AboutContent() {
   return (
@@ -13,7 +13,7 @@ export default function AboutContent() {
       <OrgStructure />
       <Leadership />
       <Specialties />
-      <Compliance />
+      {/* <Compliance /> */}
     </main>
   );
 }
@@ -55,13 +55,13 @@ function Origin() {
           <SectionHeading eyebrow="Origin" title="Why Ventra exists." />
           <p className="reveal text-steel leading-relaxed mb-4">
             Every peer review organization we studied solved reviewer overload
-            the same way — hire more physicians, or ask existing reviewers to
+            the same way — hire more physicians, do more to
             write faster. Both scale cost linearly with case volume. Neither
             fixes the underlying problem.
           </p>
           <p className="reveal text-steel leading-relaxed">
             The problem is structural: one role, credentialed for judgment, is
-            being asked to also perform narrative execution. Ventra was built
+            being asked to also sift through tons of medical records. Ventra was built
             on a single premise — separate the two jobs, and the constraint
             disappears.
           </p>
@@ -179,24 +179,24 @@ function Specialties() {
   );
 }
 
-function Compliance() {
-  const ref = useReveal<HTMLDivElement>();
-  return (
-    <section className="bg-ink text-offwhite py-20 md:py-28">
-      <div ref={ref} className="reveal mx-auto max-w-3xl px-6 md:px-10 text-center">
-        <Stethoscope className="w-8 h-8 text-brass mx-auto mb-6" strokeWidth={1.5} />
-        <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
-          NDA and confidentiality, before any case material changes hands.
-        </h2>
-        <p className="text-[#C7CDD6] leading-relaxed mb-10">
-          Staff work under a standing non-disclosure clause covering every
-          claimant whose case we touch. Your identity as our client is never
-          disclosed to a third party, including the claimant.
-        </p>
-        <a href="/service" className="inline-flex items-center gap-2 bg-brass text-ink px-7 py-4 rounded-sm hover:bg-brass/90 transition-colors font-medium">
-          See the service in detail <ArrowRight className="w-4 h-4" />
-        </a>
-      </div>
-    </section>
-  );
-}
+// function Compliance() {
+//   const ref = useReveal<HTMLDivElement>();
+//   return (
+//     <section className="bg-ink text-offwhite py-20 md:py-28">
+//       <div ref={ref} className="reveal mx-auto max-w-3xl px-6 md:px-10 text-center">
+//         <Stethoscope className="w-8 h-8 text-brass mx-auto mb-6" strokeWidth={1.5} />
+//         <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">
+//           NDA and confidentiality, before any case material changes hands.
+//         </h2>
+//         <p className="text-[#C7CDD6] leading-relaxed mb-10">
+//           Staff work under a standing non-disclosure clause covering every
+//           claimant whose case we touch. Your identity as our client is never
+//           disclosed to a third party, including the claimant.
+//         </p>
+//         <a href="/service" className="inline-flex items-center gap-2 bg-brass text-ink px-7 py-4 rounded-sm hover:bg-brass/90 transition-colors font-medium">
+//           See the service in detail <ArrowRight className="w-4 h-4" />
+//         </a>
+//       </div>
+//     </section>
+//   );
+// }

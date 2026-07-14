@@ -63,10 +63,10 @@ function SectionHeading({ eyebrow, title, dark }: { eyebrow: string; title: stri
 export function Problem() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: Users, title: "Reviewer Fatigue drives burnout, turnover, and inconsistent decisions ", body: "Heavy documentation workloads reduce clinical focus, increase physician attrition, and compromise review quality over time." },
+    { icon: Users, title: "Reviewer Fatigue drives burnout and reduces the risk of errors. ", body: "Heavy documentation workloads increase the risk of fatigue and physicians’ burnout, which may compromise the review quality in the face of increased workload." },
     { icon: AlertTriangle, title: "Inconsitent documentation increases appeal risk", body: "Variation in narrative quality creates avoidable exposure, especially in high-volume review environments where consistency is critical." },
-    { icon: FileWarning, title: " Poor documentation becomes a downstream liability.", body: "Reports that are not structured for audit or litigation create risk when cases are challenged—when corrections are mostly costly." },
-    { icon: Gauge, title: "Documentation work inflates cost per clinical decision", body: "Every hour spent drafting reports is an hour diverted from the clinical expertise your organization is paid to deliver." },
+    { icon: FileWarning, title: " Poor documentation becomes a downstream liability.", body: "Poor documentation reduces Internal consistency and increases the risk of costly appeals." },
+    { icon: Gauge, title: "Documentation work inflates cost per clinical decision", body: " Every hour spent drafting reports is an hour diverted from the premium clinical expertise the physician is paid to deliver." },
   ];
   return (
     <section className="bg-paper py-20 md:py-28">
@@ -89,7 +89,7 @@ export function Problem() {
 export function Solution() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    "Reviewer-ready drafts that eliminate the clinical rewriting cycle. ",
+    " ⁠Completely white-label—no Ventra Branding, NDA-first engagement. to ⁠- Completely white-label, no Ventra identifiers.",
     "⁠Consistent, guideline-aligned documentation across every case.",
     " ⁠Capacity that scales seamlessly with demand-without adding documentation burden.",
     "More physician time dedicated to clinical judgement, not report writing.",
@@ -108,7 +108,7 @@ export function Solution() {
             Ventra works entirely behind your organization,
              executing documentation while remaining invisible to your clients.
              Your reviewers retain clinical ownership. 
-             Your organization revieves the credit.
+             Your organization receives the credit.
           </p>
         </div>
         <ul className="space-y-5">
@@ -238,7 +238,7 @@ export function Proof() {
     { icon: ClipboardCheck, title: "36-hour standard turnaround", body: "Contractually submitted in the SLA — not just a service target." },
     { icon: ShieldCheck, title: "100% dual-physician review", body: "Every draft is authored by a physician and independently reviewed before delivery." },
     { icon: Gauge, title: "Revision rate under 10%, tracked from day one", body: "Drafts are built to be signed off, not rewritten." },
-    { icon: Building2, title: "The pilot is the proof", body: " Start with 10–25 cases at standard rates to validate quality before any volume commitment." },
+    { icon: Building2, title: "Contractually bound. Not just a service target.", body: " Every draft is completed by a physician and independently reviewed by another physician before delivery." },
   ];
   return (
     <section id="proof" className="bg-paper py-20 md:py-28">
@@ -262,7 +262,7 @@ export function WhyVentra() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
     "Physician-led authorship, every draft ECFMG-certified.",
-    "Strictly confidential — NDA first, fully white label, no Ventra presence.",
+    "Built to scale without compromising quality, consistency or turnaround time.",
     "Deep expertise across medical specialties.",
     "Built to scale without compromising quality, consistency or turn around.",
   ];
@@ -273,7 +273,7 @@ export function WhyVentra() {
         <h2 className="reveal font-display text-3xl md:text-4xl leading-tight mb-4 max-w-2xl">The Ventra Difference</h2>
         <p className="reveal text-white/70 max-w-xl mb-12 leading-relaxed">
           We separate clinical judgment from documentation execution. Reviewers
-          decide. Ventra writes. We reduce cost per decision, not just cost per case.
+          decide. Ventra writes. We improve the physician output, and cost burden.
         </p>
         <div className="grid sm:grid-cols-2 gap-5">
           {items.map((t) => (

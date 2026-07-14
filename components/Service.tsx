@@ -62,10 +62,10 @@ function ServiceHero() {
 function Included() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: FileText, title: "Full narrative drafting", body: "Clinical summary, guideline-mapped reasoning, and conclusion — structured for reviewer endorsement." },
-    { icon: ShieldCheck, title: "Dual-physician QC", body: "Every draft independently reviewed by a senior physician for accuracy and defensibility before delivery." },
-    { icon: Clock, title: "Fixed turnaround SLA", body: "24–36 hours, written into the contract — independent of your internal volume that week." },
-    { icon: Layers, title: "No-charge clarification", body: "Clarification responses within the SLA window at no additional cost." },
+    { icon: FileText, title: "Full record analysis and Case drafting", body: "Clinical summary, guideline-mapped reasoning, and conclusion — structured for reviewer endorsement." },
+    { icon: ShieldCheck, title: "Dual-physician QC", body: " Every draft is independently reviewed by a senior physician for accuracy and defensibility before delivery." },
+    { icon: Clock, title: "Fixed turnaround time", body: "24–36 hours, written into the contract — independent of your internal volume that week." },
+    { icon: Layers, title: "No-charge clarification", body: "Clarification responses at no additional cost." },
   ];
   return (
     <section className="bg-paper py-20 md:py-28">
@@ -116,9 +116,9 @@ function Included() {
 function SpecialtyGrid() {
   const ref = useReveal<HTMLDivElement>();
   const specialties = [
-    { icon: Stethoscope, title: "General & Internal Medicine", body: "Routine and complex cases across primary care, chronic condition management, and general diagnostics." },
+    { icon: Stethoscope, title: " Occupational and internal medicine", body: "Routine and complex cases across primary care, chronic condition management, and general diagnostics." },
     { icon: Brain, title: "Neurology & Psychiatry", body: "Cases requiring nuanced assessment of cognitive, neurological, and behavioral health findings." },
-    { icon: Bone, title: "Orthopedics & Musculoskeletal", body: "Functional capacity evaluations, injury claims, and post-surgical documentation." },
+    { icon: Bone, title: "Orthopedics & Pain management", body: "Functional capacity evaluations, injury claims, and post-surgical documentation." },
     { icon: HeartPulse, title: "Cardiology & Complex Comorbidities", body: "Multi-system cases requiring specialist-level reasoning and guideline-mapped conclusions." },
   ];
   return (
@@ -168,7 +168,7 @@ function FAQ() {
   const faqs = [
     ["Does anything change about who signs off on a case?", "No. Your reviewers keep full clinical authority and final sign-off — only who produces the supporting document changes."],
     ["What happens if a draft needs a revision?", "Clarification responses are provided at no charge within the SLA window."],
-    ["Will our client ever see Ventra's name?", "No. The service is true white-label — zero Ventra identifiers appear in delivered documents."],
+    // ["Will our client ever see Ventra's name?", "No. The service is true white-label — zero Ventra identifiers appear in delivered documents."],
   ];
   return (
     <section className="bg-paper py-20 md:py-28">
