@@ -207,9 +207,7 @@ export function Transformation() {
     ["Reviewers split time between judgment and writing", "Reviewers spend their time on decisions — writing fully offloaded"],
     ["Narrative quality and structure vary by reviewer", "Every draft follows one standardized, guideline-mapped structure"],
     ["Documentation defensibility is inconsistent across cases", "Every draft passes a dedicated QC review for appeal and audit defensibility"],
-    ["Capacity is capped by how many physicians you can hire", "Capacity scales with case volume — no incremental hiring required"],
-    ["Turnaround depends on reviewer bandwidth that day", "Turnaround is fixed at 24 hours, independent of internal volume"],
-  ];
+    ];
   return (
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
