@@ -203,14 +203,22 @@ export function TrustBand() {
     </section>
   );
 }
-
 export function Transformation() {
   const ref = useReveal<HTMLDivElement>();
   const rows = [
-    ["Reviewers focus exclusively on clinical judgement while documentation is fully offloaded"],
-    ["Every draft is standardized, guidline-aligned, and consistently structured"],
-    ["Every draft undergoes independent quality review to ensure audit and appeal readiness"],
-    ];
+    [
+      "Physicians split time between clinical review and documentation writing",
+      "Reviewers focus exclusively on clinical judgement while documentation is fully offloaded",
+    ],
+    [
+      "Draft quality and structure vary from reviewer to reviewer",
+      "Every draft is standardized, guideline-aligned, and consistently structured",
+    ],
+    [
+      "Drafts go out with a single pass and limited appeal protection",
+      "Every draft undergoes independent quality review to ensure audit and appeal readiness",
+    ],
+  ];
   return (
     <section className="bg-paper py-20 md:py-28">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
