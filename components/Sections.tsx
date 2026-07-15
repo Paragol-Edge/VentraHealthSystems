@@ -89,11 +89,10 @@ export function Problem() {
 export function Solution() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    " ⁠Completely white-label—no Ventra Branding, NDA-first engagement. to ⁠- Completely white-label, no Ventra identifiers.",
+    " ⁠Completely white-label, no Ventra identifiers.",
     "⁠Consistent, guideline-aligned documentation across every case.",
     " ⁠Capacity that scales seamlessly with demand-without adding documentation burden.",
     "More physician time dedicated to clinical judgement, not report writing.",
-    "⁠Completely white-label—no Ventra Branding, NDA-first engagement.",
   ];
   return (
     <section id="solution" className="bg-ink text-white py-20 md:py-28">
@@ -182,13 +181,14 @@ export function TrustBand() {
     <section className="bg-paper py-16">
       <div ref={ref} className="mx-auto max-w-7xl px-6 md:px-10">
         <div className="reveal relative rounded-md overflow-hidden border border-black/15">
-          <div className="relative w-[700px] md:w-full h-64 md:h-[700px]">
+          <div className="relative w-full h-72 sm:h-96 md:h-[600px] lg:h-[700px]">
             <Image
               src="/img1.jpg"
               alt="Physicians walking through a hospital corridor"
               fill
+              quality={75}
               className="object-cover grayscale"
-              sizes="(max-width: 850px) 120vw, 1200px"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
             />
           </div>
           <div className="p-4 bg-white">
@@ -203,6 +203,7 @@ export function TrustBand() {
     </section>
   );
 }
+
 export function Transformation() {
   const ref = useReveal<HTMLDivElement>();
   const rows = [
@@ -243,10 +244,10 @@ export function Transformation() {
 export function Proof() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    { icon: ClipboardCheck, title: "36-hour standard turnaround", body: "Contractually submitted in the SLA — not just a service target." },
+    { icon: Building2, title: "Contractually bound. Not just a service target.", body: " Every draft is completed by a physician and independently reviewed by another physician before delivery." },
     { icon: ShieldCheck, title: "100% dual-physician review", body: "Every draft is authored by a physician and independently reviewed before delivery." },
     { icon: Gauge, title: "Revision rate under 10%, tracked from day one", body: "Drafts are built to be signed off, not rewritten." },
-    { icon: Building2, title: "Contractually bound. Not just a service target.", body: " Every draft is completed by a physician and independently reviewed by another physician before delivery." },
+    { icon: ClipboardCheck, title: "36-hour standard turnaround", body: "Submitted according to the agreement in the SLA, not just a service target." },
   ];
   return (
     <section id="proof" className="bg-paper py-20 md:py-28">
@@ -272,7 +273,6 @@ export function WhyVentra() {
     "Physician-led authorship, every draft ECFMG-certified.",
     "Built to scale without compromising quality, consistency or turnaround time.",
     "Deep expertise across medical specialties.",
-    "Built to scale without compromising quality, consistency or turn around.",
   ];
   return (
     <section className="bg-ink text-white py-20 md:py-28">
@@ -305,10 +305,10 @@ export function CTA() {
           <Stethoscope className="w-8 h-8 text-black mx-auto mb-6" strokeWidth={1.5} />
           <h2 className="font-display text-3xl md:text-4xl leading-tight mb-6">A clear path to partnership.</h2>
           <p className="text-steel max-w-xl mx-auto mb-10 leading-relaxed">
-            Discovery call → NDA → 10–25 pilot cases → quality review →
+            Discovery conversation → NDA → 10–25 pilot cases → quality review →
             volume agreement. 
           </p>
-          <p className="my-3 text-steel">Reach out to schedule a discovery call.</p>
+          
           <a
             href="mailto:admin@ventrahealthsystems.com"
             className="inline-flex items-center gap-2 bg-ink text-white px-7 py-4 rounded-sm hover:bg-black/80 transition-colors font-medium"

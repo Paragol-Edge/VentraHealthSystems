@@ -40,7 +40,7 @@ function ServiceHero() {
             Documentation execution, fully offloaded.
           </h1>
           <p className="reveal text-[#C7CDD6] leading-relaxed max-w-md">
-            A fixed 24–36 hour turnaround SLA, dual-physician QC on every
+            A fixed 24–36 hour turnaround time, dual-physician QC on every
             case, and zero Ventra identifiers in what you deliver.
           </p>
         </div>
@@ -64,7 +64,7 @@ function Included() {
   const items = [
     { icon: FileText, title: "Full record analysis and Case drafting", body: "Clinical summary, guideline-mapped reasoning, and conclusion — structured for reviewer endorsement." },
     { icon: ShieldCheck, title: "Dual-physician QC", body: " Every draft is independently reviewed by a senior physician for accuracy and defensibility before delivery." },
-    { icon: Clock, title: "Fixed turnaround time", body: "24–36 hours, written into the contract — independent of your internal volume that week." },
+    { icon: Clock, title: "Fixed turnaround time", body: "24–36 hours, written into the contract — independent of your internal volume." },
     { icon: Layers, title: "No-charge clarification", body: "Clarification responses at no additional cost." },
   ];
   return (
@@ -148,9 +148,11 @@ function Pricing() {
   const ref = useReveal<HTMLDivElement>();
   return (
     <section className="bg-ink text-offwhite py-20 md:py-28">
-      <div ref={ref} className="mx-auto max-w-4xl px-6 md:px-10 text-center">
-        <SectionHeading eyebrow="Pilot Offer" title="Test the model before any volume commitment." dark />
-        <p className="reveal text-[#C7CDD6] leading-relaxed max-w-xl mx-auto mb-8">
+      <div ref={ref} className="mx-auto max-w-4xl px-6 md:px-10 flex flex-col items-center text-center">
+        <div className="w-full flex flex-col items-center text-center [&>*]:text-center [&>*]:mx-auto">
+          <SectionHeading eyebrow="Pilot Offer" title="Test the model before any volume commitment." dark />
+        </div>
+        <p className="reveal text-[#C7CDD6] leading-relaxed max-w-xl mx-auto mb-8 text-center">
           10–25 cases at standard rates, with full SLA and QC guarantees.
           You are not asked to trust the model — you are asked to test it
           against your own quality bar first.
@@ -166,7 +168,7 @@ function Pricing() {
 function FAQ() {
   const ref = useReveal<HTMLDivElement>();
   const faqs = [
-    ["Does anything change about who signs off on a case?", "No. Your reviewers keep full clinical authority and final sign-off — only who produces the supporting document changes."],
+    ["Does anything change about who signs off on a case?", "No. Your reviewers keep full clinical authority and final sign-off. We only help with analysing the medical records."],
     ["What happens if a draft needs a revision?", "Clarification responses are provided at no charge within the SLA window."],
     // ["Will our client ever see Ventra's name?", "No. The service is true white-label — zero Ventra identifiers appear in delivered documents."],
   ];

@@ -121,7 +121,7 @@ export default function Hero() {
               style={{ top: 0 }}
             />
             <p className="font-mono text-[10px] tracking-widest2 uppercase text-white/70 mb-4">
-              Draft — Clinical Review Narrative
+              Draft — Peer Review
             </p>
 
             <div ref={addLineRef} className="flex items-center gap-3 mb-3">

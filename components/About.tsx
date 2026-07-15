@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useReveal, SectionHeading, ImageBand } from "@/components/ui";
-import { Compass, HeartHandshake, ShieldCheck, Layers, } from "lucide-react";
+import { Compass, Clock3, ShieldCheck, Layers, } from "lucide-react";
 
 export default function AboutContent() {
   return (
@@ -10,7 +10,7 @@ export default function AboutContent() {
       <AboutHero />
       <Origin />
       <Values />
-      <OrgStructure />
+      {/* <OrgStructure />  */}
       <Leadership />
       <Specialties />
       {/* <Compliance /> */}
@@ -81,8 +81,7 @@ function Values() {
   const items = [
     { icon: Compass, title: "Clinical Authority Remains Yours", body: "Your reviewers retain full clinical ownership, decision-making authority, and final sign-off on every case." },
     { icon: ShieldCheck, title: " Consistent Reviewer-ready Documentation", body: "Every draft is physician-authored, quality-reviewed, and delivered in a standardized, guideline-aligned format." },
-    { icon: HeartHandshake, title: " Completely Invisible", body: "NDA-first engagement. Fully white-label. Every deliverable is branded as your own own, we stay invisible while you remain the trusted face of the work." },
-    { icon: Layers, title: "Quality that scales", body: "As volume grows, documentation quality, consistency, and turnaround remain unchanged." },
+   {icon: Clock3, title: "Rapid Delivery", body: "Move from idea to execution quickly. Our streamlined workflow keeps projects on schedule without sacrificing quality or attention to detail."}, { icon: Layers, title: "Quality that scales", body: "As volume grows, documentation quality, consistency, and turnaround remain unchanged." },
   ];
   return (
     <section className="bg-ink text-offwhite py-20 md:py-28">
@@ -102,35 +101,35 @@ function Values() {
   );
 }
 
-function OrgStructure() {
-  const ref = useReveal<HTMLDivElement>();
-  return (
-    <section className="bg-paper py-20 md:py-28">
-      <div ref={ref} className="mx-auto max-w-5xl px-6 md:px-10">
-        <SectionHeading eyebrow="Organization" title="Operational management, separated from clinical execution." />
-        <div className="reveal border border-steel/20 rounded-md overflow-hidden">
-          <div className="bg-ink text-offwhite text-center py-4 font-display">Founder / CEO</div>
-          <div className="grid md:grid-cols-3 border-t border-steel/20">
-            {[
-              { role: "Head of Medical Services", teams: ["Senior Physician Reviewers", "Physician Writers"] },
-              { role: "Head of Operations", teams: ["Case Intake Coordinators", "Client Relations Managers"] },
-              { role: "Head of Compliance, Legal & Technical", teams: ["Technical & Compliance", "Legal"] },
-            ].map((col, i) => (
-              <div key={col.role} className={`p-6 ${i > 0 ? "md:border-l border-steel/20" : ""}`}>
-                <p className="font-display text-base mb-4">{col.role}</p>
-                {col.teams.map((t) => (
-                  <p key={t} className="text-sm text-steel py-1 border-t border-steel/10 first:border-0">
-                    {t}
-                  </p>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
+// function OrgStructure() {
+//   const ref = useReveal<HTMLDivElement>();
+//   return (
+//     <section className="bg-paper py-20 md:py-28">
+//       <div ref={ref} className="mx-auto max-w-5xl px-6 md:px-10">
+//         <SectionHeading eyebrow="Organization" title="Operational management, separated from clinical execution." />
+//         <div className="reveal border border-steel/20 rounded-md overflow-hidden">
+//           <div className="bg-ink text-offwhite text-center py-4 font-display">Founder / CEO</div>
+//           <div className="grid md:grid-cols-3 border-t border-steel/20">
+//             {[
+//               { role: "Head of Medical Services", teams: ["Senior Physician Reviewers", "Physician Writers"] },
+//               { role: "Head of Operations", teams: ["Case Intake Coordinators", "Client Relations Managers"] },
+//               { role: "Head of Compliance, Legal & Technical", teams: ["Technical & Compliance", "Legal"] },
+//             ].map((col, i) => (
+//               <div key={col.role} className={`p-6 ${i > 0 ? "md:border-l border-steel/20" : ""}`}>
+//                 <p className="font-display text-base mb-4">{col.role}</p>
+//                 {col.teams.map((t) => (
+//                   <p key={t} className="text-sm text-steel py-1 border-t border-steel/10 first:border-0">
+//                     {t}
+//                   </p>
+//                 ))}
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 
 function Leadership() {
   const ref = useReveal<HTMLDivElement>();
@@ -149,8 +148,8 @@ function Leadership() {
         <div className="order-1 md:order-2">
           <SectionHeading eyebrow="Physician Team" title="Physician-led authorship, at every stage." dark />
           <p className="reveal text-[#C7CDD6] leading-relaxed">
-            Every draft is produced by an ECFMG-certified or U.S.-licensed
-            physician writer, matched to the case by specialty, and
+            Every draft is produced by an ECFMG-certified or
+            physician analyst, matched to the case by specialty, and
             independently reviewed by a senior physician before it reaches
             you. No draft ships without a second clinical set of eyes.
           </p>
