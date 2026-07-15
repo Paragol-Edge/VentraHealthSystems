@@ -238,7 +238,7 @@ export function Transformation() {
       </div>
     </section>
   );
-}
+};
 
 export function Proof() {
   const ref = useReveal<HTMLDivElement>();
