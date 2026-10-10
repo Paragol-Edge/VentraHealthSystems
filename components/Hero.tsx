@@ -55,7 +55,7 @@ export default function Hero() {
     <section className="bg-ink text-white relative overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 md:px-10 pt-16 pb-20 md:pt-24 md:pb-28 grid md:grid-cols-2 gap-14 items-center">
         <div>
-          <p className="eyebrow text-white/70 mb-6">Confidential · US Peer Review</p>
+          <p className="eyebrow text-white/70 mb-6">Confidential · Medical disability peer review drafting service</p>
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] mb-6">
             Your reviewers decide.
             <br />

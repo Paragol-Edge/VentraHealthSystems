@@ -270,7 +270,7 @@ export function Proof() {
 export function WhyVentra() {
   const ref = useReveal<HTMLDivElement>();
   const items = [
-    "Physician-led authorship, every draft ECFMG-certified.",
+    "Physician led authorship for every draft.",
     "Built to scale without compromising quality, consistency or turnaround time.",
     "Deep expertise across medical specialties.",
   ];

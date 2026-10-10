@@ -148,7 +148,7 @@ function Leadership() {
         <div className="order-1 md:order-2">
           <SectionHeading eyebrow="Physician Team" title="Physician-led authorship, at every stage." dark />
           <p className="reveal text-[#C7CDD6] leading-relaxed">
-            Every draft is produced by an ECFMG-certified or
+            Every draft produced by a physician analyst or
             physician analyst, matched to the case by specialty, and
             independently reviewed by a senior physician before it reaches
             you. No draft ships without a second clinical set of eyes.
